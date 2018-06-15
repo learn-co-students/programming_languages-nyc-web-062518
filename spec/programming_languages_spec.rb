@@ -31,7 +31,7 @@ describe '#reformat_languages' do
         :javascript => {
           :type => "interpreted"
         }
-     
+
       }
     }
   }
@@ -40,6 +40,7 @@ describe '#reformat_languages' do
 
   it 'reformats ruby properly' do
     ruby = {:type => "interpreted", :style => [:oo]}
+          #binding.pry
     ruby.each { |k,v| expect(result[:ruby][k]).to eq(v) }
   end
 
